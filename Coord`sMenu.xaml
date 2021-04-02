@@ -1,0 +1,49 @@
+﻿<Window x:Class="MarathonDEGTYANNIKOVIN3802.Coord_sMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarathonDEGTYANNIKOVIN3802"
+        mc:Ignorable="d"
+        Title="Marathon Skills 2016 - Coordinator menu" Height="450" Width="800" FontFamily="Open Sans Semibold ">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="637*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF505050" Margin="0,0,0,389" Grid.ColumnSpan="2"/>
+        <Button Width="50" HorizontalAlignment="Left" Margin="10,4,0,395" Content="Назад" FontFamily="Open Sans Light">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Button Width="50" HorizontalAlignment="Right" Margin="0,4,10,395" Content="Logout" FontFamily="Open Sans Light" Grid.Column="1">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Label Content="Меню координатора" Margin="195.393,52,234,323" HorizontalAlignment="Center" Width="208" FontFamily="Open Sans Light " Foreground="#FF505050" Height="44" FontSize="20" Grid.Column="1"/>
+        <Button Height="50" Margin="128,112,394,257"  Background="#FFEBEBEB" FontStyle="Italic"  FontSize="18" Grid.ColumnSpan="2">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+
+            <TextBlock TextAlignment="Center">Бегуны</TextBlock>
+
+        </Button>
+        <Rectangle Fill="#FF505050" Margin="0,389,0,0" Grid.ColumnSpan="2"/>
+        <Label Content="18 дней 8 часов и 17 минут до старта марафона!" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="White" FontFamily="Open Sans Light" Margin="80,0,217,0" Height="28" Width="340" Grid.Column="1"/>
+
+    </Grid>
+</Window>
