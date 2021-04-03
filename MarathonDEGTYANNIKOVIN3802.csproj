@@ -58,6 +58,7 @@
     <Compile Include="Admin`sMenu.xaml.cs">
       <DependentUpon>Admin`sMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClassSQL.cs" />
     <Compile Include="Coord`sMenu.xaml.cs">
       <DependentUpon>Coord`sMenu.xaml</DependentUpon>
     </Compile>

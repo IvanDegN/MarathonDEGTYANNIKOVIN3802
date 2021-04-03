@@ -22,6 +22,20 @@ namespace MarathonDEGTYANNIKOVIN3802
         public RegistrationWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            ClassSQL.Query("SELECT...");
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+            
         }
     }
 }

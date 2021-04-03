@@ -53,7 +53,7 @@
         </Button>
         <Rectangle Fill="#FF505050" Margin="0,389,0,0"/>
         <Label Content="18 дней 8 часов и 17 минут до старта марафона!" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="White" FontFamily="Open Sans Light" Margin="235,0,217,0" Height="28" Width="340"/>
-        <Button Content="ФОТО" HorizontalAlignment="Left" Margin="658,153,0,0" VerticalAlignment="Top" Width="102" Height="96"/>
+        <Image Margin="662,94,10,161"></Image>
         <Label Content="Фото файл:" HorizontalAlignment="Left" Margin="546,235,0,0" VerticalAlignment="Top"/>
         <TextBox Margin="546,264,144,129"/>
         <Button Content="Просмотр" Margin="653,263,32,128" FontFamily="Open Sans Light" Background="#FFEBEBEB">

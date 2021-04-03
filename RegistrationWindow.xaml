@@ -11,9 +11,9 @@
             <ColumnDefinition Width="31*"/>
             <ColumnDefinition Width="761*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF505050" Margin="0,0,0,389" Grid.ColumnSpan="2"/>
-        <Label Content="MARATHON SKILLS 2016" Margin="65,0,0,389" Foreground="#FFFFFFFC" FontFamily="Open Sans Semibold" FontSize="15" FontWeight="Bold" Grid.Column="1"/>
-        <Button Width="50" HorizontalAlignment="Left" Margin="10,4,0,395" Content="Назад" FontFamily="Open Sans Light" Grid.ColumnSpan="2">
+        <Rectangle Fill="#FF505050" Margin="0,0,0,377" Grid.ColumnSpan="2"/>
+        <Label Content="MARATHON SKILLS 2016" Margin="65,0,0,354" Foreground="#FFFFFFFC" FontFamily="Open Sans Semibold" FontSize="15" FontWeight="Bold" Grid.Column="1"/>
+        <Button Name="Back" Width="50" HorizontalAlignment="Left" Margin="10,4,0,389" Content="Назад" FontFamily="Open Sans Light" Grid.ColumnSpan="2" Click="Back_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -27,12 +27,12 @@
         <Label Content="Форма авторизации" Margin="295,65,337,310" HorizontalAlignment="Center" Grid.Column="1" Width="129" FontFamily="Open Sans Light "></Label>
         <Label Content="Пожалуйста, авторизуйтесь в системе, используя ваш адрес электронной почты " Margin="108,109,126,274" Grid.Column="1" FontFamily="Open Sans Light "></Label>
         <Label Content="и пароль" Grid.Column="1" Margin="315,135,368,254" FontFamily="Open Sans Light "/>
-        <Label Content="Email:" Grid.Column="1" Margin="182,171,529,216" FontFamily="Open Sans Light "></Label>
+        <Label Content="Email:" Grid.Column="1" Margin="182,171,529,186" FontFamily="Open Sans Light "></Label>
         <TextBox Margin="232,171,298,222" Grid.Column="1" AutomationProperties.HelpText="Enter your email address"/>
 
-        <Label Content="Password:" Grid.Column="1" Margin="165,208,529,186" FontFamily="Open Sans Light "></Label>
+        <Label Content="Password:" Grid.Column="1" Margin="165,208,529,146" FontFamily="Open Sans Light "></Label>
         <TextBox Margin="232,208,298,185" Grid.Column="1"/>
-        <Button Content="Login" Margin="232,245,422,146" FontFamily="Open Sans Light" Background="#FFEBEBEB" Grid.Column="1">
+        <Button Name="Login" Content="Login" Margin="232,245,422,146" FontFamily="Open Sans Light" Background="#FFEBEBEB" Grid.Column="1" Click="Login_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

@@ -20,9 +20,25 @@ namespace MarathonDEGTYANNIKOVIN3802
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.ShowDialog();
+            // if(registrationWindow ==  )
+            // {
+            //MainWindow mainWindow = new MainWindow();
+            //mainWindow.Close();
+            //Close();
+
+            // }
+
         }
     }
 }
