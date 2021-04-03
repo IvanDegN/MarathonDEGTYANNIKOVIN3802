@@ -40,5 +40,11 @@ namespace MarathonDEGTYANNIKOVIN3802
             // }
 
         }
+
+        private void IWantToBeRunner_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterAsRunner registerAsRunner = new RegisterAsRunner();
+            registerAsRunner.ShowDialog();
+        }
     }
 }

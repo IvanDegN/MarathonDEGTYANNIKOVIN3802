@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarathonDEGTYANNIKOVIN3802"
         mc:Ignorable="d"
-        Title="Marathon Skills 2016 – Register as a runner" Height="450" Width="800" FontFamily="Open Sans Semibold">
+        Title="Marathon Skills 2016 – Register as a runner" Height="450" Width="800" FontFamily="Open Sans Semibold" >
+    
     <Grid>
         <Rectangle Fill="#FF505050" Margin="0,0,0,389"/>
         <Button Width="50" HorizontalAlignment="Left" Margin="10,4,0,395" Content="Назад" FontFamily="Open Sans Light">
@@ -22,11 +23,11 @@
         <Label Content="Пожалуйста заполните всю информацию, чтобы зарегистрироваться в качестве " Margin="126,68,139,315" FontFamily="Open Sans Light "  HorizontalContentAlignment="Center"/>
         <Label Content="бегуна" Margin="333,94,381,295" FontFamily="Open Sans Light "/>
         <Label Content="Email:" Margin="222,118,520,269" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,118,289,275" AutomationProperties.HelpText="Enter your email address" Name="tb"/>
-        <Label Content="Пароль:" Margin="205,149,520,245" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,149,289,244"/>
+        <TextBox Margin="272,118,289,270"     HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4"  />
+        <Label Content="Пароль:" Margin="205,149,520,239" FontFamily="Open Sans Light " />
+        <TextBox Margin="272,149,289,244" Text="Enter your password" Name="Password" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4" PreviewMouseLeftButtonDown="Password_PreviewMouseLeftButtonDown" LostFocus="Password_LostFocus"/>
         <Label Content="Повторите пароль:" Margin="148,180,520,214" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,180,289,213"/>
+        <TextBox Margin="272,180,289,213" Name="RepeatPassword" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4" Text="Repeat your password" LostFocus="RepeatPassword_LostFocus" PreviewMouseLeftButtonDown="RepeatPassword_PreviewMouseLeftButtonDown"/>
         <Label Content="Имя:" Margin="205,211,520,183" FontFamily="Open Sans Light "/>
         <TextBox Margin="272,211,289,182"/>
         <Label Content="Фамилия:" Margin="205,242,520,152" FontFamily="Open Sans Light "/>
@@ -69,33 +70,7 @@
         <DatePicker HorizontalAlignment="Left" Margin="658,296,0,0" VerticalAlignment="Top" Width="102"/>
         <Label Content="Страна:" Margin="554,321,171,73" FontFamily="Open Sans Light "/>
         <ComboBox HorizontalAlignment="Left" Margin="621,326,0,0" VerticalAlignment="Top" Width="139"/>
-
-
-
-
-        
-        <TextBlock Foreground="LightGray"
-               Text="Введите текст..."
-               IsHitTestVisible="False"
-               MaxWidth="{Binding ActualWidth, ElementName=tb}" Margin="277,124,418,275">
-            <TextBlock.Style>
-                <Style TargetType="TextBlock">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <MultiDataTrigger>
-                            <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding IsKeyboardFocused, ElementName=tb}"
-                                       Value="False"/>
-                                <Condition Binding="{Binding Text, ElementName=tb}"
-                                       Value="{x:Static sys:String.Empty}"
-                                       xmlns:sys="clr-namespace:System;assembly=mscorlib"/>
-                            </MultiDataTrigger.Conditions>
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </MultiDataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
+        <Label Name="Email" Content="Enter your email" Margin="277,118,415,269" FontFamily="Open Sans Light"  Foreground="#FFB4B4B4" GotFocus="Email_GotFocus_1" PreviewMouseLeftButtonDown="Email_PreviewMouseLeftButtonDown"/>
 
 
     </Grid>
