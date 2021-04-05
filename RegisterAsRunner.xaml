@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:MarathonDEGTYANNIKOVIN3802"
         mc:Ignorable="d"
         Title="Marathon Skills 2016 – Register as a runner" Height="450" Width="800" FontFamily="Open Sans Semibold" >
-    
+
     <Grid>
-        <Rectangle Fill="#FF505050" Margin="0,0,0,389"/>
-        <Button Width="50" HorizontalAlignment="Left" Margin="10,4,0,395" Content="Назад" FontFamily="Open Sans Light">
+        <Rectangle Fill="#FF505050" Margin="0,0,0,384"/>
+        <Button Name="Back" Width="50" HorizontalAlignment="Left" Margin="10,0,0,388" Content="Назад" FontFamily="Open Sans Light" Click="Back_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -18,22 +18,26 @@
             </Button.Resources>
 
         </Button>
-        <Label Content="MARATHON SKILLS 2016" Margin="90,0,0,389" Foreground="#FFFFFFFC" FontFamily="Open Sans Semibold" FontSize="15" FontWeight="Bold"/>
+        <Label Content="MARATHON SKILLS 2016" Margin="90,0,0,315" Foreground="#FFFFFFFC" FontFamily="Open Sans Semibold" FontSize="15" FontWeight="Bold"/>
         <Label Content="Регистрация бегуна" Margin="292,35,298,340" HorizontalAlignment="Center" Width="202" FontFamily="Open Sans Semibold " Foreground="#FF505050" Height="44" FontSize="20"/>
         <Label Content="Пожалуйста заполните всю информацию, чтобы зарегистрироваться в качестве " Margin="126,68,139,315" FontFamily="Open Sans Light "  HorizontalContentAlignment="Center"/>
         <Label Content="бегуна" Margin="333,94,381,295" FontFamily="Open Sans Light "/>
         <Label Content="Email:" Margin="222,118,520,269" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,118,289,270"     HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4"  />
+        <TextBox Margin="272,118,289,270"     HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="Black"  />
+        <Label Name="Email" Content="Enter your email" Margin="277,118,384,269" FontFamily="Open Sans Light"  Foreground="#FFB4B4B4" GotFocus="Email_GotFocus_1" PreviewMouseLeftButtonDown="Email_PreviewMouseLeftButtonDown"/>
         <Label Content="Пароль:" Margin="205,149,520,239" FontFamily="Open Sans Light " />
-        <TextBox Margin="272,149,289,244" Text="Enter your password" Name="Password" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4" PreviewMouseLeftButtonDown="Password_PreviewMouseLeftButtonDown" LostFocus="Password_LostFocus"/>
-        <Label Content="Повторите пароль:" Margin="148,180,520,214" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,180,289,213" Name="RepeatPassword" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#FFB4B4B4" Text="Repeat your password" LostFocus="RepeatPassword_LostFocus" PreviewMouseLeftButtonDown="RepeatPassword_PreviewMouseLeftButtonDown"/>
-        <Label Content="Имя:" Margin="205,211,520,183" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,211,289,182"/>
-        <Label Content="Фамилия:" Margin="205,242,520,152" FontFamily="Open Sans Light "/>
-        <TextBox Margin="272,242,289,151"/>
-        <Label Content="Пол:" Margin="205,273,520,121" FontFamily="Open Sans Light "/>
-        <ComboBox HorizontalAlignment="Left" Margin="272,278,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBox Margin="272,149,289,239" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="Black" />
+        <Label Name="Password" Content="Enter your password" FontFamily="Open Sans Light"  Foreground="#FFB4B4B4" Margin="277,150,381,237" RenderTransformOrigin="-1.423,1.031" GotFocus="Password_GotFocus" PreviewMouseLeftButtonDown="Password_PreviewMouseLeftButtonDown"></Label>
+        <Label Content="Повторите пароль:" Margin="148,180,520,208" FontFamily="Open Sans Light "/>
+        <TextBox Margin="272,180,289,208" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="Black" />
+        <Label Name="RepeatPassword" Content="Repeat your password" Margin="277,180,367,208" Foreground="#FFB4B4B4" PreviewMouseLeftButtonDown="RepeatPassword_PreviewMouseLeftButtonDown" GotFocus="RepeatPassword_GotFocus"></Label>
+        <Label Content="Имя:" Margin="205,211,520,177" FontFamily="Open Sans Light "/>
+
+        <TextBox Margin="272,211,289,177"/>
+        <Label Content="Фамилия:" Margin="205,242,520,146" FontFamily="Open Sans Light "/>
+        <TextBox Margin="272,242,289,146"/>
+        <Label Content="Пол:" Margin="205,273,520,112" FontFamily="Open Sans Light "/>
+        <ComboBox HorizontalAlignment="Left" Margin="272,278,0,0" VerticalAlignment="Top" Width="139" MouseEnter="ComboBox_MouseEnter"/>
         <Button Content="Регистрация" Margin="263,312,422,79" FontFamily="Open Sans Light" Background="#FFEBEBEB">
 
             <Button.Resources>
@@ -43,7 +47,7 @@
             </Button.Resources>
 
         </Button>
-        <Button Content="Отмена" Margin="387,312,298,79" FontFamily="Open Sans Light" Background="#FFEBEBEB">
+        <Button Name="Cancel" Content="Отмена" Margin="387,312,298,79" FontFamily="Open Sans Light" Background="#FFEBEBEB" Click="ButtonCancel_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -52,8 +56,8 @@
             </Button.Resources>
 
         </Button>
-        <Rectangle Fill="#FF505050" Margin="0,389,0,0"/>
-        <Label Content="18 дней 8 часов и 17 минут до старта марафона!" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="White" FontFamily="Open Sans Light" Margin="235,0,217,0" Height="28" Width="340"/>
+        <Rectangle Fill="#FF505050" Margin="0,379,0,0"/>
+        <Label Content="18 дней 8 часов и 17 минут до старта марафона!" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="White" FontFamily="Open Sans Light" Margin="240,0,212,0" Height="30" Width="340"/>
         <Image Margin="662,94,10,161"></Image>
         <Label Content="Фото файл:" HorizontalAlignment="Left" Margin="546,235,0,0" VerticalAlignment="Top"/>
         <TextBox Margin="546,264,144,129"/>
@@ -66,11 +70,14 @@
             </Button.Resources>
 
         </Button>
-        <Label Content="Дата рождения:" Margin="539,296,129,98" FontFamily="Open Sans Light "/>
+        <Label Content="Дата рождения:" Margin="539,296,129,73" FontFamily="Open Sans Light "/>
         <DatePicker HorizontalAlignment="Left" Margin="658,296,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Страна:" Margin="554,321,171,73" FontFamily="Open Sans Light "/>
+        <Label Content="Страна:" Margin="554,321,171,59" FontFamily="Open Sans Light " RenderTransformOrigin="0.5,0.5"/>
         <ComboBox HorizontalAlignment="Left" Margin="621,326,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Name="Email" Content="Enter your email" Margin="277,118,415,269" FontFamily="Open Sans Light"  Foreground="#FFB4B4B4" GotFocus="Email_GotFocus_1" PreviewMouseLeftButtonDown="Email_PreviewMouseLeftButtonDown"/>
+        <Label Name="Name" Content="Enter your First Name" Foreground="#FFB4B4B4" Margin="277,211,381,164" PreviewMouseLeftButtonDown="Name_PreviewMouseLeftButtonDown"></Label>
+        <Label Name="LastName" Content="Enter your Last Name" Foreground="#FFB4B4B4" PreviewMouseLeftButtonDown="LastName_PreviewMouseLeftButtonDown" Margin="277,243,258,129"></Label>
+
+
 
 
     </Grid>

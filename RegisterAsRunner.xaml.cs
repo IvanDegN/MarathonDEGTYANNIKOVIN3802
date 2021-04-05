@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,14 @@ using System.Windows.Shapes;
 
 namespace MarathonDEGTYANNIKOVIN3802
 {
+
     /// <summary>
     /// Логика взаимодействия для RegisterAsRunner.xaml
     /// </summary>
     public partial class RegisterAsRunner : Window
     {
+        public static string connectionStr = @"Data Source=PCSQLSTUD01;Initial Catalog = 10180030; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True";
+
         public RegisterAsRunner()
         {
             InitializeComponent();
@@ -63,25 +67,9 @@ namespace MarathonDEGTYANNIKOVIN3802
         //    RepeatPassword.Text = "Repeat your password";
         //}
 
-        private void Password_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Password.Text = "";
-        }
+        
 
-        private void Password_LostFocus(object sender, RoutedEventArgs e)
-        {
-            Password.Text = "Enter your password";
-        }
-
-        private void RepeatPassword_LostFocus(object sender, RoutedEventArgs e)
-        {
-            RepeatPassword.Text = "";
-        }
-
-        private void RepeatPassword_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            RepeatPassword.Text = "";
-        }
+        
 
         private void Email_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -104,6 +92,62 @@ namespace MarathonDEGTYANNIKOVIN3802
         {
             Email.Visibility = Visibility.Hidden;
         }
+
+        private void Password_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Password.Visibility = Visibility.Hidden;
+        }
+
+        private void Password_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Password.Visibility = Visibility.Hidden;
+        }
+
+        private void RepeatPassword_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            RepeatPassword.Visibility = Visibility.Hidden;
+        }
+
+        private void RepeatPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            RepeatPassword.Visibility = Visibility.Hidden;
+        }
+
+        private void Name_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Name.Visibility = Visibility.Hidden;
+        }
+
+        private void LastName_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LastName.Visibility = Visibility.Hidden;
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.ShowDialog();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+        }
+
+        private void ComboBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+            
+            ClassSQL.Query("SELECT * FROM Gender");
+
+        }
+
+
+
+
+
+
 
 
 

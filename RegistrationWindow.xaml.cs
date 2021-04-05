@@ -37,5 +37,11 @@ namespace MarathonDEGTYANNIKOVIN3802
             mainWindow.ShowDialog();
             
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+        }
     }
 }

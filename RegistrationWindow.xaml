@@ -41,7 +41,7 @@
             </Button.Resources>
 
         </Button>
-        <Button Content="Cancel" Margin="356,245,298,146" FontFamily="Open Sans Light" Background="#FFEBEBEB" Grid.Column="1">
+        <Button Name="Cancel" Content="Cancel" Margin="356,245,298,146" FontFamily="Open Sans Light" Background="#FFEBEBEB" Grid.Column="1" Click="Cancel_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
